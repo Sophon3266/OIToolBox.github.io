@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<style>
+html{
+	background:#f1f1f1;
+}
+</style>
+<head>
+  <link rel="icon" type="image/x-icon" href="favicon.png"/>
+  <title>OI助手 | 一个OI竞赛工具箱</title>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="mdui/css/mdui.min.css">
+  <script src="mdui/js/mdui.min.js"></script>
+
+
+
+</head>
+<body class="mdui-appbar-with-toolbar" style="background:#f1f1f1;">
+
+  <div class="mdui-dialog" id="about-dialog">
+    <div class="mdui-dialog-title">关于</div>
+    <div class="mdui-dialog-content">作者 abc2237512422</div>
+    <div class="mdui-dialog-actions">
+      <button class="mdui-btn mdui-ripple" mdui-dialog-close>返回</button>
+    </div>
+  </div>
+
+
+  <div class="mdui-drawer  mdui-color-white mdui-drawer-close" id="drawer">
+  <ul class="mdui-list" style="max-width: 360px;">
+	<li class="mdui-list-item mdui-ripple" onclick="inst.close();">
+		<i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+		<div class="mdui-list-item-content">首页</div>
+	</li>
+	<li class="mdui-list-item mdui-ripple" onclick="inst.close();window.open('https://eyun.baidu.com/s/3pLyMD3l');">
+		<i class="mdui-list-item-icon mdui-icon material-icons">file_download</i>
+		<div class="mdui-list-item-content">下载</div>
+	</li>
+	<li class="mdui-list-item mdui-ripple" mdui-dialog="{target: '#about-dialog'}">
+		<i class="mdui-list-item-icon mdui-icon material-icons">info</i>
+		<div class="mdui-list-item-content">关于</div>
+	</li>
+  </ul>
+  </div>
+  <div class="mdui-appbar mdui-appbar-fixed">
+    <div class="mdui-toolbar mdui-color-indigo">
+      <a href="javascript:inst.toggle();" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"><i class="mdui-icon material-icons">menu</i></a>
+      <a class="mdui-typo-headline">OI助手</a>
+      <a class="mdui-typo-title">简洁快速的OI工具箱</a>
+      <div class="mdui-toolbar-spacer"></div>
+    </div>
+  </div>
+ <button onclick="window.open('https://eyun.baidu.com/s/3pLyMD3l')" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-pink" style="z-index:9999;"><i class="mdui-icon material-icons">file_download</i></button><!--fab-->
+
+    
+  
+	<div style="color: #fff!important;background-color: #3f51b5!important;padding-top:60px;padding-bottom:100px;text-align:center;" class="main-section mdui-color-theme">
+		<!--<img src="src\icon.png" class="mdui-img-fluid" style="height:100px;widows:100px;;"></img>-->
+			<h1 class="mdui-typo-display-2">OI助手</h1>
+			<h2 class="mdui-typo-subheading-opacity">简洁快速的OI工具箱</h2>
+			<a href="https://eyun.baidu.com/s/3pLyMD3l" class="mdui-btn mdui-ripple mdui-ripple-white" style="margin-top:25px;border: 1px solid hsla(0,0%,100%,.6);color: hsla(0,0%,100%,.6);border-radius: 500px;font-size:15px;height:36px;weight:112px;">下载</a>
+	</div>
+      
+  
+  <div class="mdui-container" style="background:#f1f1f1;margin-top:20px;">
+	<div class="mdui-card mdui-hoverable">
+		<div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">    OI助手是什么？</div>
+            <div class="mdui-card-content">OI助手是一个轻量简洁的OI工具箱。你可以使用它来快速进行OI竞赛中一些繁琐的操作，例如生成竞赛目录、对拍。它为你省去了手动做这些操作的时间。</div>
+        </div>
+	</div>
+	
+	<h1 class="mdui-typo-display-1-opacity" style="margin-top:35px;width:48%;">功能</h1>
+	<div style="display:flex;margin-top:5px;">
+		<div class="mdui-card mdui-hoverable" style="width:48%;">
+			<div class="mdui-card-primary">
+				<div class="mdui-card-primary-title">竞赛目录生成</div>
+				<div class="mdui-card-sub-title">快速地生成OI竞赛目录</div>
+				<div></br><strong>自定义生成的文件类型</strong></br>您可以自由的选择要生成的文件类型，如cpp、pas、in、out文件。</br><strong>自定义代码模板</strong></br>您可以选择内置的代码模板，也可以自定义一个代码模板。在生成时启用代码模板可以让程序自动向生成的CPP文件中输出代码框架。</div>
+			</div>
+		</div>
+		<div class="mdui-card mdui-hoverable" style="width:48%;margin-left:4%;">
+			<div class="mdui-card-primary">
+				<div class="mdui-card-primary-title">对拍助手</div>
+				<div class="mdui-card-sub-title">图形化对拍工具</div>
+				<div></br><strong>自动完成对拍操作</strong></br>您可以使用图形界面进行两个程序的对拍，并自动比较输出，在输出不同时显示行号并自动暂停。</br><strong>对比输出文件</strong></br>同屏对比输出文件，使比较输出更省力，同时也更易查出程序的漏洞。</div>
+			</div>
+		</div>
+	</div>
+  </div>
+</body>
+   <script>
+    var inst = new mdui.Drawer('#drawer');
+    /*window.onload=function(){ 
+      inst.close();
+    }*/
+	function about(){
+		
+	}
+  </script>
+</html>
